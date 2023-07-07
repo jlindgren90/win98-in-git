@@ -1,0 +1,7 @@
+@echo off
+if not exist \windows\system.dat goto build
+if not exist \windows\user.dat goto build
+goto nobuild
+:build
+call regbuild
+:nobuild
