@@ -1,3 +1,7 @@
+echo "THIS SCRIPT IRREVERSIBLY DELETES FILES YOU MAY WANT"
+echo "DO NOT RUN IT UNLESS YOU ABSOLUTELY KNOW WHAT YOU ARE DOING"
+exit 1
+
 rm -rf 'Program Files/Common Files/Microsoft Shared/Stationery'
 rm -rf 'Program Files/Common Files/services'
 rm -rf 'Program Files/Online Services'
@@ -31,7 +35,8 @@ find windows/inf -iname '*.pnf' -delete
 
 rm -f 'windows/Exit To Dos.pif'
 rm -f windows/inf/{drvdata,drvidx}.bin
-rm -f windows/{user,system}.dat
+# dangerous, only uncomment if you know your backup is good!
+# rm -f windows/{user,system}.dat
 rm -f windows/win386.swp
 
 touch -d "2000-01-01 00:00 UTC" windows/win386.swp
